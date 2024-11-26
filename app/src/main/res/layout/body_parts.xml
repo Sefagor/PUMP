@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/bodyPartsMain"
+    android:background="@color/cardview_dark_background">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/bodyPartsPagetxt"
+        android:text="@string/body_parts"
+        android:textSize="20sp"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginBottom="10dp"
+        android:textStyle="bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/neck"
+        android:layout_below="@id/bodyPartsPagetxt"
+        android:padding="15dp"
+        android:orientation="horizontal"
+        android:background="@drawable/relative_layout_bg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/neckTxt"
+            android:text="@string/neck"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/neckValue"
+            android:text=""
+            android:textStyle="italic"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/shoulder"
+        android:layout_below="@id/neck"
+        android:padding="15dp"
+        android:background="@drawable/relative_layout_bg">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoulderTxt"
+            android:text="@string/shoulder"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/shoulderValue"
+            android:text=""
+            android:textStyle="italic"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/chest"
+        android:layout_below="@id/shoulder"
+        android:padding="15dp"
+        android:background="@drawable/relative_layout_bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/chestTxt"
+        android:text="@string/chest"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chestValue"
+            android:text=""
+            android:textStyle="italic"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/arms"
+        android:layout_below="@id/chest"
+        android:padding="15dp"
+        android:background="@drawable/relative_layout_bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/armsTxt"
+        android:text="@string/arms"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/armsValue"
+            android:text=""
+            android:textStyle="italic"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/waist"
+        android:layout_below="@id/arms"
+        android:padding="15dp"
+        android:background="@drawable/relative_layout_bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/waistTxt"
+        android:text="@string/waist"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/waistValue"
+            android:text=""
+            android:textStyle="italic"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/hips"
+        android:layout_below="@id/waist"
+        android:padding="15dp"
+        android:background="@drawable/relative_layout_bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/hipsTxt"
+        android:text="@string/hips"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hipsValue"
+            android:text=""
+            android:textStyle="italic"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/legs"
+        android:layout_below="@id/hips"
+        android:padding="15dp"
+        android:background="@drawable/relative_layout_bg">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/legsTxt"
+        android:text="@string/legs"
+        android:textSize="16sp"
+        android:textColor="@color/white"
+        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/legsValue"
+            android:text=""
+            android:textStyle="italic"
+            android:layout_marginStart="10dp"
+            android:textSize="16sp"/>
+    </LinearLayout>
+
+
+</RelativeLayout>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="colorPressed">#aeb0af</color>
+    <color name="colorFocused">#939695</color>
+    <color name="colorNormal">@color/cardview_dark_background</color>
+</resources>

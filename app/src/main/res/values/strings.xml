@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Pump</string>
+    <string name="measure">Measurements</string>
+    <string name="weight">Weight</string>
+    <string name="calorie">Calorie</string>
+    <string name="neck">Neck</string>
+    <string name="shoulder">Shoulder</string>
+    <string name="chest">Chest</string>
+    <string name="arms">Arms</string>
+    <string name="hips">Hips</string>
+    <string name="legs">Legs</string>
+    <string name="waist">Waist</string>
+    <string name="fat">Fat Percent</string>
+    <string name="history">History</string>
+    <string name="yes">Yes</string>
+    <string name="deleteWarning">Do you want to remove this Entry</string>
+    <string name="height">Height</string>
+    <string name="enter_height">Enter your Height in cm</string>
+    <string name="body_parts">Body Parts</string>
+</resources>
