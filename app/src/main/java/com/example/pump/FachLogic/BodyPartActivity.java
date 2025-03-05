@@ -71,6 +71,7 @@ public class BodyPartActivity extends AppCompatActivity {
             case LEGS: pageTitle.setText(context.getString(R.string.legs));break;
             case CALORIES: pageTitle.setText(context.getString(R.string.calorie));break;
             case WEIGHT: pageTitle.setText(context.getString(R.string.weight));break;
+            case HEIGHT: pageTitle.setText(context.getString((R.string.height))); break;
             default: throw new IllegalArgumentException("Unknown MeasurementType: " + type);
         }
     }

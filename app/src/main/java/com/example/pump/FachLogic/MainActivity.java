@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -19,11 +21,14 @@ import androidx.core.graphics.Insets;
 import androidx.core.view.ViewCompat;
 import androidx.core.view.WindowInsetsCompat;
 
+import com.example.pump.Data.DialogUtils;
 import com.example.pump.Data.Utils;
 import com.example.pump.MeasurementType;
 import com.example.pump.R;
 
 import java.util.ArrayList;
+
+import com.google.android.material.bottomnavigation.BottomNavigationView;
 
 public class MainActivity extends AppCompatActivity {
     LinearLayout weight, calorie, fat, bodyParts, height;
@@ -43,10 +48,23 @@ public class MainActivity extends AppCompatActivity {
         //Initialize all variables
         initViews();
 
+        BottomNavigationView bottomNavigationView = findViewById(R.id.bottom_navigation);
+        bottomNavigationView.setOnItemSelectedListener(item -> {
+            if (item.getItemId() == R.id.nav_home) {  // Error should go away if IDs are properly generated
+                Log.d("Navigation", "Home clicked");
+            }
+            if (item.getItemId() == R.id.nav_workout) {  // Error should go away if IDs are properly generated
+                startActivity(new Intent(MainActivity.this, WorkoutActivity.class));
+                return true;
+            }
+            return false;
+        });
+
         height.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                showAddHeightDialog();
+                Intent heightIntent = BodyPartActivity.createIntent(MainActivity.this, MeasurementType.HEIGHT);
+                startActivity(heightIntent);
             }
         });
 
@@ -113,12 +131,10 @@ public class MainActivity extends AppCompatActivity {
         if(heights == null){
             heights = new ArrayList<>();
         }
-        heights = Utils.getInstance(MainActivity.this).getMeasurements(MeasurementType.HEIGHT);
-        Log.d("MainActivity", "Loaded heights: " + heights);
     }
 
-    public static <T> T getLastElement(ArrayList<T> list) {
-        return list.isEmpty() ? null : list.get(list.size() - 1);
+    public static Measurements getLastElement(ArrayList<Measurements> list) {
+        return list.isEmpty() ? new Measurements(0f) : list.get(list.size() - 1);
     }
 
     private double bodyFatCalculator(){
@@ -126,48 +142,6 @@ public class MainActivity extends AppCompatActivity {
         float waist = getLastElement(Utils.getInstance(this).getMeasurements(MeasurementType.WAIST)).getNumberData();
         float height = getLastElement(Utils.getInstance(this).getMeasurements(MeasurementType.HEIGHT)).getNumberData();
         return (86.010 * Math.log10(waist - neck)) - (70.041 * Math.log10(height)) +30.30;
-    }
-    public void showAddHeightDialog() {
-        AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        LayoutInflater inflater = this.getLayoutInflater();
-        View dialogView = inflater.inflate(R.layout.add_entry, null);
-        builder.setView(dialogView);
-
-        final EditText editTextHeight = dialogView.findViewById(R.id.entry);
-        String enterHeight = getString(R.string.enter_height);
-        editTextHeight.setText(enterHeight);
-        editTextHeight.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                editTextHeight.setText("");
-            }
-        });
-        Button buttonSubmit = dialogView.findViewById(R.id.buttonSubmit);
-
-        final AlertDialog dialog = builder.create();
-
-        buttonSubmit.setOnClickListener(new View.OnClickListener() {
-            @SuppressLint("SetTextI18n")
-            @Override
-            public void onClick(View v) {
-                try {
-                    String  heightText= editTextHeight.getText().toString();
-                    if (!heightText.isEmpty()) {
-                        float heightValue = Float.parseFloat(heightText);
-                        String currentDate = Measurements.getCurrentDate();
-                        Measurements heightEntry = new Measurements(heightValue, currentDate);
-                        heights.add(heightEntry);
-                        Utils.getInstance(MainActivity.this).saveMeasurements(heights, MeasurementType.HEIGHT);
-                        heightValueTxt.setText(String.format("%.2f",getLastElement(Utils.getInstance(MainActivity.this).getMeasurements(MeasurementType.HEIGHT)).getNumberData()));
-                        dialog.dismiss();
-                    }
-                } catch (Exception e) {
-                    Log.e("MainActivity", "Error adding weight", e);
-                }
-            }
-        });
-
-        dialog.show();
     }
 
 }

@@ -3,19 +3,19 @@
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/cardview_dark_background">
+    android:background="#121212"
+    android:orientation="vertical"
+    android:padding="20dp">
 
     <TextView
         android:id="@+id/measurementPagetxt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/measure"
-        android:textSize="20sp"
+        android:textSize="24sp"
         android:textColor="@color/white"
-        android:layout_marginTop="20dp"
-        android:layout_marginStart="20dp"
-        android:layout_marginBottom="10dp"
         android:textStyle="bold"
+        android:layout_marginBottom="20dp"
         />
     <TextView
         android:layout_width="wrap_content"
@@ -23,16 +23,14 @@
         android:layout_below="@+id/measurementPagetxt"
         android:text="@string/history"
         android:textColor="#a4a5a6"
-        android:layout_marginStart="20dp"
-        android:layout_marginTop="10dp"
-        android:textSize="14sp"/>
+        android:textSize="16sp"/>
     <ImageButton
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:id="@+id/addBtn"
         android:layout_below="@id/measurementPagetxt"
         android:layout_alignParentEnd="true"
-        android:backgroundTint="@color/cardview_dark_background"
+        android:backgroundTint="#4DB6AC"
         android:src="@drawable/add_icon"/>
 
     <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"

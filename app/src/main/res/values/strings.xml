@@ -17,4 +17,8 @@
     <string name="height">Height</string>
     <string name="enter_height">Enter your Height in cm</string>
     <string name="body_parts">Body Parts</string>
+    <string name="workouts">Workouts</string>
+    <string name="workout_title">Workout Title</string>
+    <string name="workout_details">Workout details go here</string>
+    <string name="add_workout">Add new Workout</string>
 </resources>

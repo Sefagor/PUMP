@@ -44,14 +44,35 @@ public class MeasurementAdapter extends RecyclerView.Adapter<MeasurementAdapter.
 
     @Override
     public void onBindViewHolder(@NonNull ViewHolder holder, int position) {
-        holder.measurementValue.setText(String.format("%.2f cm", measurements.get(position).getNumberData()));
-        holder.date.setText(measurements.get(position).getDate());
+        Measurements measurement = measurements.get(position);
+
+        String unit;
+        if (measurementType == null) {
+            unit = "cm";
+        } else {
+            switch (measurementType) {
+                case WEIGHT:
+                    unit = "kg";
+                    break;
+                case CALORIES:
+                    unit = "kcal";
+                    break;
+                default:
+                    unit = "cm";
+                    break;
+            }
+        }
+
+        holder.measurementValue.setText(String.format("%.2f %s", measurement.getNumberData(), unit));
+        holder.date.setText(measurement.getDate());
     }
+
 
     @Override
     public int getItemCount() {
         return measurements.size();
     }
+
     public void removeItem(int positon){
         measurements.remove(positon);
         notifyItemRemoved(positon);

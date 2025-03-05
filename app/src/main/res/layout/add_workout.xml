@@ -6,11 +6,17 @@
     android:padding="16dp">
 
     <EditText
-        android:id="@+id/entry"
+        android:id="@+id/addWorkoutName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="Enter your Measurament"
-        android:inputType="numberDecimal" />
+        android:hint="Workout Name"
+        android:inputType="text" />
+    <EditText
+        android:id="@+id/addWorkoutDetails"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Workout Details"
+        android:inputType="text" />
 
     <Button
         android:id="@+id/buttonSubmit"

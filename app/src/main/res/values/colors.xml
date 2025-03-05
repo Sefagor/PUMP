@@ -2,7 +2,7 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
-    <color name="colorPressed">#aeb0af</color>
-    <color name="colorFocused">#939695</color>
-    <color name="colorNormal">@color/cardview_dark_background</color>
+    <color name="colorPressed">#3A9EA5</color>
+    <color name="colorFocused">#4DB6AC</color>
+    <color name="colorNormal">#1F1F1F</color>
 </resources>

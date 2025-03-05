@@ -5,6 +5,7 @@ import android.content.SharedPreferences;
 import android.util.Log;
 
 import com.example.pump.FachLogic.Measurements;
+import com.example.pump.FachLogic.Workout;
 import com.example.pump.MeasurementType;
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
@@ -23,6 +24,7 @@ public class Utils {
     private static final String WAIST_KEY ="waist_key";
     private static final String HIPS_KEY ="hips_key";
     private static final String LEGS_KEY ="legs_key";
+    private static final String Workout_KEY ="workout_key";
     private final SharedPreferences sharedPreferences;
     private static Utils instance;
 
@@ -80,6 +82,21 @@ public class Utils {
         String key = getMeasurementKey(type);
         ArrayList<Measurements> measurements = gson.fromJson(sharedPreferences.getString(key, null), listType);
         return measurements != null ? measurements : new ArrayList<>();
+    }
+
+    public void saveWorkouts(ArrayList<Workout> workoutList) {
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        Gson gson = new Gson();
+        String json = gson.toJson(workoutList);
+
+        editor.putString(Workout_KEY, json);
+        editor.apply();
+    }
+    public ArrayList<Workout> getWorkouts() {
+        Gson gson = new Gson();
+        Type listType = new TypeToken<ArrayList<Workout>>() {}.getType();
+        ArrayList<Workout> workoutList = gson.fromJson(sharedPreferences.getString(Workout_KEY, null), listType);
+        return workoutList != null ? workoutList : new ArrayList<>();
     }
 
 
