@@ -5,4 +5,5 @@
     <color name="colorPressed">#3A9EA5</color>
     <color name="colorFocused">#4DB6AC</color>
     <color name="colorNormal">#1F1F1F</color>
+    <color name="selected_color">#4DB6AC</color>
 </resources>

@@ -2,12 +2,10 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:id="@+id/bodyPartsMain"
     android:background="#121212"
-    android:orientation="vertical"
-    android:padding="20dp">
-
-
+    android:orientation="vertical">
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -15,7 +13,7 @@
         android:text="@string/body_parts"
         android:textSize="24sp"
         android:textColor="@color/white"
-        android:layout_marginBottom="20dp"
+        android:layout_margin="20dp"
         android:textStyle="bold"/>
 
     <LinearLayout
@@ -79,14 +77,14 @@
         android:layout_below="@id/shoulder"
         android:padding="15dp"
         android:background="@drawable/relative_layout_bg">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/chestTxt"
-        android:text="@string/chest"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/chestTxt"
+            android:text="@string/chest"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -104,14 +102,14 @@
         android:layout_below="@id/chest"
         android:padding="15dp"
         android:background="@drawable/relative_layout_bg">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/armsTxt"
-        android:text="@string/arms"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/armsTxt"
+            android:text="@string/arms"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -129,14 +127,14 @@
         android:layout_below="@id/arms"
         android:padding="15dp"
         android:background="@drawable/relative_layout_bg">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/waistTxt"
-        android:text="@string/waist"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/waistTxt"
+            android:text="@string/waist"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -154,14 +152,14 @@
         android:layout_below="@id/waist"
         android:padding="15dp"
         android:background="@drawable/relative_layout_bg">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/hipsTxt"
-        android:text="@string/hips"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/hipsTxt"
+            android:text="@string/hips"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -179,14 +177,14 @@
         android:layout_below="@id/hips"
         android:padding="15dp"
         android:background="@drawable/relative_layout_bg">
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:id="@+id/legsTxt"
-        android:text="@string/legs"
-        android:textSize="16sp"
-        android:textColor="@color/white"
-        android:textStyle="bold" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/legsTxt"
+            android:text="@string/legs"
+            android:textSize="16sp"
+            android:textColor="@color/white"
+            android:textStyle="bold" />
         <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
@@ -196,6 +194,5 @@
             android:layout_marginStart="10dp"
             android:textSize="16sp"/>
     </LinearLayout>
-
 
 </RelativeLayout>

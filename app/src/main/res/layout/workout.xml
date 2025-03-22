@@ -1,12 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:padding="16dp"
-    android:background="#121212">
-
+    android:background="#121212"
+    android:id="@+id/main">
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="20dp">
     <TextView
         android:id="@+id/workoutsTitle"
         android:layout_width="wrap_content"
@@ -24,11 +27,14 @@
         android:backgroundTint="#4DB6AC"
         android:text="@string/add_workout"
         android:textSize="20sp"
-        android:layout_marginBottom="16dp"/>
+        android:layout_marginBottom="16dp"
+        android:layout_below="@id/workoutsTitle"/>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/workoutsRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:scrollbars="vertical" />
-</LinearLayout>
+        android:scrollbars="vertical"
+        android:layout_below="@id/workoutAddButton"/>
+    </RelativeLayout>
+</RelativeLayout>

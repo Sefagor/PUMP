@@ -2,17 +2,17 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android">
     <item
         android:id="@+id/nav_home"
-        android:icon="@drawable/ic_launcher_foreground"
+        android:icon="@drawable/ic_home_black_24dp"
         android:title="Home" />
 
     <item
         android:id="@+id/nav_workout"
-        android:icon="@android:drawable/ic_menu_edit"
+        android:icon="@drawable/baseline_fitness_center_24"
         android:title="Workout" />
 
     <item
         android:id="@+id/nav_profile"
-        android:icon="@android:drawable/ic_menu_info_details"
+        android:icon="@drawable/baseline_person_24"
         android:title="Profile" />
 </menu>
 

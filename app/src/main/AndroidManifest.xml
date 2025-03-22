@@ -12,11 +12,12 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Pump"
         tools:targetApi="31">
-        <activity android:name=".FachLogic.BodyParts" />
-        <activity android:name=".FachLogic.BodyPartActivity"/>
-        <activity android:name=".FachLogic.WorkoutActivity"/>
+        <activity android:name=".FachLogic.Activitys.BodyParts" />
+        <activity android:name=".FachLogic.Activitys.BodyPartActivity"/>
+        <activity android:name=".FachLogic.Activitys.WorkoutActivity"/>
+        <activity android:name=".FachLogic.Activitys.AddWorkout"/>
         <activity
-            android:name=".FachLogic.MainActivity"
+            android:name=".FachLogic.Activitys.MainActivity"
             android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

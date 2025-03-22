@@ -1,28 +1,80 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content"
+    android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="16dp">
+    android:background="#121212"
+    android:id="@+id/main">
+
+    <LinearLayout
+        android:id="@+id/topbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#1F1F1F"
+        android:padding="8dp"
+        android:layout_marginBottom="12dp">
+        <Button
+            android:id="@+id/buttonCancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancel"
+            android:backgroundTint="#4DB6AC"
+            android:layout_weight="1"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="14dp"
+            android:layout_marginEnd="14dp"
+            android:text="@string/add_workout"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:layout_weight="1"
+            />
+
+        <Button
+            android:id="@+id/buttonSubmit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:backgroundTint="#4DB6AC"
+            android:layout_weight="1"/>
+    </LinearLayout>
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_below="@id/topbar">
 
     <EditText
         android:id="@+id/addWorkoutName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
         android:hint="Workout Name"
-        android:inputType="text" />
-    <EditText
-        android:id="@+id/addWorkoutDetails"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:hint="Workout Details"
-        android:inputType="text" />
+        android:inputType="text"
+        android:textColorHint="@color/white" />
 
-    <Button
-        android:id="@+id/buttonSubmit"
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/exercisesRecyclerView"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@id/addWorkoutName"
+        android:scrollbars="vertical"/>
+</RelativeLayout>
+    <androidx.appcompat.widget.Toolbar
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="Submit"
-        android:layout_marginTop="16dp"
-        android:backgroundTint="#4DB6AC"/>
-</LinearLayout>
+        android:layout_alignParentBottom="true">
+        <Button
+            android:id="@+id/addExerciseButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/add_Exercise"
+            android:layout_gravity="center"
+            android:backgroundTint="#4DB6AC" />
+    </androidx.appcompat.widget.Toolbar>
+</RelativeLayout>

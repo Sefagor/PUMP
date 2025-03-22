@@ -20,5 +20,13 @@
     <string name="workouts">Workouts</string>
     <string name="workout_title">Workout Title</string>
     <string name="workout_details">Workout details go here</string>
-    <string name="add_workout">Add new Workout</string>
+    <string name="add_workout">Create new Workout</string>
+    <string name="add_Exercise">Add new Exercise</string>
+    <string name="exercise_title">Exercise Title</string>
+    <string name="set">Set</string>
+    <string name="last">Last</string>
+    <string name="kg">Weight(Kg)</string>
+    <string name="reps">Reps</string>
+    <string name="empty">0</string>
+    <string name="add_set">Add Set</string>
 </resources>
